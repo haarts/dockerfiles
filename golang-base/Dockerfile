@@ -31,7 +31,7 @@ RUN cd $GOPATH/src/github.com/kisielk/errcheck && go install
 # from https://github.com/StackPointCloud/docker-influxdb
 ADD metrics/config.js /opt/grafana/config.js
 ADD metrics/nginx.conf /etc/nginx/nginx.conf
-ADD metrics/supervisord.conf /etc/supervisor/conf.d/supervisord.conf
+ADD metrics/supervisord.conf /etc/supervisor/conf.d/metrics.conf
 ADD metrics/config.toml /opt/influxdb/current/config.toml
 
 CMD ["bash"]
