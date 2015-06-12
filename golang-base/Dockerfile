@@ -7,6 +7,7 @@ LABEL version=13
 
 ADD postgres ./postgres
 ADD install.sh ./
+ADD postgres/supervisord.conf /etc/supervisor/conf.d/postgres.conf
 RUN sh install.sh
 
 ADD run_services.sh /opt/
